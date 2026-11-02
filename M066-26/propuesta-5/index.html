@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sudameris · Propuesta 5 · Oferta y boleta</title>
+  <link rel="stylesheet" href="../propuesta-2/styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="home.css?v=42">
+<link rel="stylesheet" href="sidebar-menus.css?v=1"></head>
+<body class="home-mode">
+  <div class="bank-app">
+    <header class="topbar">
+      <a class="brand" href="#"><img class="home-brand-image" src="assets/logo.svg" alt="Sudameris"><strong class="transfer-brand-text">SUDAMERIS</strong><span>Todo un banco.</span></a>
+      <div class="profile">
+        <span class="profile-copy"><small>Perfil</small><strong>USUARIO XXXXX0591</strong></span>
+        <button class="profile-menu" type="button"><span class="profile-avatar"></span><span class="profile-chevron"></span></button>
+        <span class="theme-icon">☼</span><span class="theme-switch"></span><span class="theme-icon">☼</span>
+        <button class="notification" type="button"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor"><path d="m8 11 8-5M8 13l8 5"/><circle cx="5" cy="12" r="3"/><circle cx="19" cy="4" r="3"/><circle cx="19" cy="20" r="3"/></svg></button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <label class="menu-search"><span>⌕</span><input type="search" placeholder="Buscar"></label>
+        <button id="navTransfers" type="button"><span>⇄</span> Transferencias <b>›</b></button>
+        <button id="paymentsToggle" type="button" aria-expanded="false" aria-controls="paymentsMenu"><span>▤</span> Pagos <b>›</b></button><div id="paymentsMenu" class="payments-menu" hidden><button type="button">Tarjetas</button><button type="button">Préstamos</button><button type="button">Servicios</button></div>
+        <button type="button"><span>↗</span> Consultar <b>›</b></button>
+        <button type="button"><span>▣</span> Líneas aprobadas <b>›</b></button>
+        <button id="requestToggle" type="button" aria-expanded="false" aria-controls="requestMenu"><span>▣</span> Solicitar <b>›</b></button>
+<div id="requestMenu" hidden><button type="button" class="request-option">Ahorro Programado</button><button type="button" class="request-option">Chequera</button><button type="button" class="request-option">Préstamos</button><button type="button" class="request-option">Nueva Tarjeta</button><button type="button" class="request-option">Tarjeta Adicional</button><button type="button" class="request-option">Aumento de Línea de Crédito</button><button type="button" class="request-option">Cambio de Ciclo de Pago</button><button type="button" class="request-option">Reimpresión de PIN de Tarjeta</button><button type="button" class="request-option">Nuevo Seguro</button><button type="button" class="request-option">Cheque Gerencia</button><button type="button" class="request-option">Comercio Exterior</button><a href="transferencia-exterior/index.html">Transferencia al Exterior</a><button type="button" class="request-option">Usuario e-bank para Adicional</button></div>
+        <button type="button"><span>✓</span> Autorizaciones <b>›</b></button>
+        <button type="button"><span>▱</span> Billeteras <b>›</b></button>
+        <button type="button"><span>QR</span> Operaciones con QR <b>›</b></button>
+        <button type="button"><span>$</span> Cotizaciones <b>›</b></button>
+        <button type="button"><span class="spi">SIP</span> Operaciones SIP <b>›</b></button>
+        <button type="button"><span>♮</span> Configuraciones <b>›</b></button>
+        <button type="button"><span>♙</span> Seguridad <b>›</b></button>
+      </nav>
+      <button class="logout" type="button">↪ Cerrar sesión</button>
+    </aside>
+
+    <main class="workspace">
+      <section id="homeView" aria-label="Inicio"><div class="home-grid"><div class="home-main"><div class="home-heading"><h1>Todas mis cuentas</h1><button id="homeFilterToggle" aria-expanded="false">FILTRAR <img class="" src="assets/filter.svg" alt=""></button></div><nav class="home-tabs" aria-label="Productos"><button class="active" aria-selected="true" data-home-tab="Cuentas">Cuentas</button><button aria-selected="false" data-home-tab="Tarjetas">Tarjetas</button><button aria-selected="false" data-home-tab="CDA">CDA</button></nav><div id="homeFilters" hidden><label>Moneda <select id="homeCurrencyFilter"><option value="">Todas</option><option value="PYG">Guaraníes</option><option value="USD">Dólares</option><option value="EUR">Euros</option></select></label></div><div id="homeAccounts"><article class="home-account" data-currency="USD"><div class="home-account-body"><div class="home-account-tag"><strong>4018190000</strong><span>Cuentas Corrientes</span></div><div class="home-owner"><small>TITULAR</small><span>XXXXXXXXXXXXXXXX</span></div><div class="home-balance"><small>SALDO</small><strong data-balance="USD 89.998,00">USD&nbsp; 89.998,00</strong></div><button class="home-eye" aria-label="Ocultar saldo de cuenta USD" aria-pressed="false"><img class="" src="assets/eye.svg" alt=""></button></div><footer><button type="button"><img class="" src="assets/movements.svg" alt="">Ver movimientos</button><button type="button" data-home-transfer="USD"><img class="" src="assets/transfer-gray.svg" alt="">Transferir</button></footer></article><article class="home-account" data-currency="PYG"><div class="home-account-body"><div class="home-account-tag"><strong>4018190000</strong><span>Cuentas Corrientes</span></div><div class="home-owner"><small>TITULAR</small><span>XXXXXXXXXXXXXXXX</span></div><div class="home-balance"><small>SALDO</small><strong data-balance="Gs. 1.843.386">Gs.&nbsp; 1.843.386</strong></div><button class="home-eye" aria-label="Ocultar saldo de cuenta PYG" aria-pressed="false"><img class="" src="assets/eye.svg" alt=""></button></div><footer><button type="button"><img class="" src="assets/movements.svg" alt="">Ver movimientos</button><button type="button" data-home-transfer="PYG"><img class="" src="assets/transfer-gray.svg" alt="">Transferir</button></footer></article><article class="home-account" data-currency="EUR"><div class="home-account-body"><div class="home-account-tag"><strong>4018190001</strong><span>Caja de Ahorros</span></div><div class="home-owner"><small>TITULAR</small><span>XXXXXXXXXXXXXXXX</span></div><div class="home-balance"><small>SALDO</small><strong data-balance="EUR 50.000,00">EUR&nbsp; 50.000,00</strong></div><button class="home-eye" aria-label="Ocultar saldo de cuenta EUR" aria-pressed="false"><img class="" src="assets/eye.svg" alt=""></button></div><footer><button type="button"><img class="" src="assets/movements.svg" alt="">Ver movimientos</button><button type="button" data-home-transfer="EUR"><img class="" src="assets/transfer-gray.svg" alt="">Transferir</button></footer></article></div><p id="homeEmpty" hidden></p></div><aside class="home-aside"><div class="home-authorizations"><img class="" src="assets/auth-white.svg" alt=""> AUTORIZACIONES</div><div class="home-promo"><div><h2>Sudameris <em>Club</em></h2><p>El programa de beneficios más completo del mercado.</p></div><img class="" src="assets/club.svg" alt=""></div><div class="home-promo"><div><h2>Sudameris <em>Go</em></h2><p>Servicios &amp; promociones relacionadas a viajes.</p></div><img class="" src="assets/go.svg" alt=""></div><button class="home-product">SOLICITAR NUEVO PRODUCTO <img class="" src="assets/arrow-white.svg" alt=""></button><p class="home-last-login">Último ingreso: 24-09-2026 a las 13:43:39 Hs.</p></aside></div><span class="home-version">v2.0.40</span></section>
+      <section id="transferView" hidden>
+        <div class="page-heading"><p><a href="#" id="transferHomeLink">Inicio</a> <span>›</span> Transferencias</p><h1>Transferencias</h1></div>
+        <nav class="transfer-tabs" id="transferTabs" aria-label="Opciones de transferencias">
+          <button class="active" type="button">Destinatarios</button>
+          <button type="button">Operaciones Guardadas</button>
+        </nav>
+        <div class="layout-grid source-selection" id="transferLayout">
+          <div class="content-column">
+            <section class="source-panel initial-origin-panel">
+              <div class="section-title"><h2>¿Desde qué cuenta?</h2><button id="changeOrigin" type="button" hidden>Cambiar cuenta</button></div>
+              <label class="account-search"><img src="assets/search.svg" alt=""><input id="originSearch" type="search" placeholder="Buscar cuenta" aria-label="Buscar cuenta"></label>
+<div class="account-options" id="originOptions"><button class="origin-candidate" type="button" data-origin="USD" aria-label="Seleccionar cuenta 4018190000 en USD"><span class="candidate-tag"><b>4018190000</b><small>Cuentas Corrientes</small></span><span class="candidate-owner"><small>TITULAR</small><b>XXXXXXXXXXXXXXXX</b></span><span class="candidate-balance"><small>SALDO</small><b>USD 89.998,00</b></span><img class="candidate-eye" src="assets/eye.svg" alt=""></button>
+<button class="origin-candidate" type="button" data-origin="PYG" aria-label="Seleccionar cuenta 4018190000 en PYG"><span class="candidate-tag"><b>4018190000</b><small>Cuentas Corrientes</small></span><span class="candidate-owner"><small>TITULAR</small><b>XXXXXXXXXXXXXXXX</b></span><span class="candidate-balance"><small>SALDO</small><b>Gs. 1.843.386</b></span><img class="candidate-eye" src="assets/eye.svg" alt=""></button>
+<button class="origin-candidate" type="button" data-origin="EUR" aria-label="Seleccionar cuenta 4018190001 en EUR"><span class="candidate-tag"><b>4018190001</b><small>Caja de Ahorros</small></span><span class="candidate-owner"><small>TITULAR</small><b>XXXXXXXXXXXXXXXX</b></span><span class="candidate-balance"><small>SALDO</small><b>EUR 50.000,00</b></span><img class="candidate-eye" src="assets/eye.svg" alt=""></button>
+</div><p id="originSearchEmpty" hidden>No se encontraron cuentas.</p>
+              <article class="destination-account debit-account" id="originAccount" hidden>
+                <div class="account-tag"><strong id="originAccountNumber">1953769000</strong><small id="originAccountType">Cuenta corriente</small></div>
+                <div><small>TITULAR</small><strong>USUARIO XXXXX0591</strong><span>Alias de la cuenta</span></div>
+                <div class="available"><small>MONEDA</small><strong id="originCurrencyLabel">PYG</strong></div>
+                <button class="balance-visibility" type="button" aria-label="Mostrar saldo"><svg class="balance-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+              </article>
+            </section>
+
+            <section class="destination-panel locked" id="destinationSection" hidden>
+              <div class="section-title"><h2>¿A qué cuenta?</h2><button class="add-other-account" type="button">AGREGAR OTRA CUENTA</button></div>
+              <div class="destination-actions">
+                <label class="account-search"><img src="assets/search.svg" alt=""><input aria-label="Buscar destinatario" id="destinationSearch" type="search" placeholder="Primero seleccioná la cuenta de origen" disabled></label>
+                <button type="button">AGREGAR NUEVA CUENTA</button>
+              </div>
+              <div class="account-options" id="destinationOptions" hidden>
+                <button type="button" data-destination="PYG"><span>490875</span><b>Empresa Prueba Júpiter'1</b><strong>PYG</strong></button>
+                <button type="button" data-destination="USD"><span>300053000</span><b>Empresa Prueba Júpiter'1</b><strong>USD</strong></button>
+              </div>
+              <div class="destination-detail" id="destinationDetail" hidden>
+                <div class="destination-detail-heading"><span>Cuenta destino</span><button id="changeDestination" type="button">Cambiar cuenta</button></div>
+              <article class="source-account credit-account" id="destinationAccount" hidden>
+                <div class="account-icon"><img src="assets/bank.png" alt="Sudameris"></div>
+                <div class="credit-account-copy">
+                  <b>Empresa Prueba Júpiter'1</b>
+                  <span>Caja de ahorro <small id="destinationCurrencyLabel">USD</small></span>
+                  <strong id="destinationAccountNumber">300053000</strong>
+                </div>
+                <a href="#" class="destination-edit">Editar</a><i class="destination-edit">›</i><div class="destination-selected-balance" hidden><small>SALDO</small><strong id="destinationBalance"></strong></div><img class="destination-selected-eye" src="assets/eye.svg" alt="" hidden>
+              </article>
+
+            <form class="transfer-form" id="transferForm" hidden>
+              <div class="form-card">
+                    <section id="existingDomesticVoucher" hidden><button type="button" id="existingDomesticToggle" class="preferential-heading" aria-expanded="false" aria-controls="existingDomesticList">CAMBIO PREFERENCIAL<span aria-hidden="true"></span></button><div id="existingDomesticList" hidden><button type="button" id="selectDomesticVoucher"><span><small>N° DE BOLETA</small>125999998</span><span><small>SALDO</small>100,00</span><span><small>COTIZACIÓN</small>0,89</span></button></div></section>
+<section id="preferentialSummary" class="preferential-summary" hidden>
+                      <button type="button" id="togglePreferential" class="preferential-heading" aria-expanded="true" aria-controls="preferentialDetails">CAMBIO PREFERENCIAL<span aria-hidden="true"></span></button>
+                      <div id="preferentialDetails" class="preferential-details">
+                        <div><small>N° DE BOLETA</small><span id="preferentialNumber"></span></div>
+                        <div><small>SALDO</small><span id="preferentialBalance"></span></div>
+                        <div><small>COTIZACIÓN</small><span id="preferentialRate"></span></div>
+                        <button id="cancelPreferential" type="button">NO UTILIZAR BOLETA</button>
+                      </div>
+                    </section>
+                    <div class="form-grid two-cols rate-row">
+                  <label>Moneda<select id="currencyField"><option value="Dólares">USD</option><option value="Euros">EUR</option><option value="Guaraníes">PYG</option></select></label>
+                      <label>Monto<input id="amountField" inputmode="decimal" value="0" required></label>
+                  <div class="web-quote-control">
+                    <div class="web-quote" id="quoteIndicator">
+                      <div class="rate-main"><span id="quoteLabel">Cotización</span><strong id="quoteRate">6.000</strong></div>
+                      <div class="rate-previous"><span>Cotización anterior</span><strong>Gs. 6.000</strong></div>
+                      <button id="openBoard" type="button" hidden>NO USAR MEJORA</button>
+                    </div>
+                    <div class="improve-quote-row" id="improveQuoteRow" hidden>
+                      <button id="improveQuote" type="button" aria-expanded="false">Consultar mejora de cotización</button>
+                    </div>
+                  </div>
+                      </div>
+                    <section class="inline-offer-panel" id="inlineOfferPanel" hidden>
+                      <div class="inline-offer-copy">
+                        <div><small>Cotización actual</small><strong id="inlineCurrentRate">Gs. 6.000</strong></div>
+                        <span class="inline-rate-arrow">→</span>
+                        <div><small>Cotización mejorada</small><strong id="inlineImprovedRate">Gs. 6.050</strong></div>
+                      </div>
+                      <div class="inline-offer-action"><button id="applyInlineOffer" type="button">GENERAR BOLETA</button></div>
+                    </section>
+                <label id="interbankOnline" class="interbank-online" hidden><input type="radio" name="interbankMode" checked> En Línea</label><label>Concepto <small>[opcional]</small><input type="text"></label>
+              </div>
+            </form>
+              </div>
+              <div class="transfer-actions" id="transferActions" hidden>
+                <label class="switch-row"><input id="scheduleToggle" type="checkbox" aria-controls="scheduleFields" aria-expanded="false"><span class="switch"></span><span>Programar</span></label><section id="scheduleFields" class="schedule-fields" hidden><h3>Programar transferencia</h3><div><label>Periodo<select id="schedulePeriod" form="transferForm" disabled><option>Por única Vez</option></select></label><label>A partir del día<input id="scheduleDate" type="date" form="transferForm" disabled></label></div></section>
+                <aside id="domesticQuoteHours" class="quote-hours-notice"><h3>Aviso importante</h3><strong>Autogestión de tipo de cambio mejorado:</strong><ul><li>Podrá autogestionar su solicitud de cotización mejorada desde la opción &quot;Consultar Mejora de Cotización&quot;.</li><li>Las transferencias que utilicen tipo de cambio mejorado deben procesarse los días hábiles, de lunes a viernes, de 08:00 a 15:59 Hs.</li></ul></aside><aside id="sipNotice" class="sip-notice" hidden><img src="assets/sip.svg" alt="SIP"><h3>Aviso importante</h3><p>Las transferencias serán procesadas:</p><ul><li>En línea hasta Gs. 10.000.000.</li><li>A partir de las 08:01 Hs. a 17:30 Hs., en línea para importes superiores a Gs. 10.000.000.</li><li>Posterior a las 17:30 Hs., con montos superiores a Gs. 10.000.000, serán ejecutadas al día siguiente hábil o en la fecha programada.</li></ul><p>Las Transferencias con fondos de Cuentas Conjuntas podrán ser procesadas una vez se haya completado totalmente el esquema de firmas, acorde a los horarios definidos por tipo de transferencia.</p><div class="quote-hours"><strong>Autogestión de tipo de cambio mejorado:</strong><ul><li>Podrá autogestionar su solicitud de cotización mejorada desde la opción &quot;Consultar Mejora de Cotización&quot;.</li><li>Las transferencias que utilicen tipo de cambio mejorado deben procesarse los días hábiles, de lunes a viernes, de 08:00 a 15:59 Hs.</li></ul></div></aside><button class="primary-button next-button" type="submit" form="transferForm">SIGUIENTE</button>
+              </div>
+            </section>
+          </div>
+
+          <div class="demo-side-column">
+          <aside class="limits-panel" id="limitsPanel" hidden>
+            <h2>Límites transaccionales</h2>
+            <div class="limits-card">
+              <section><h3>Por transacción</h3><small>LÍMITE</small><strong>Gs. 10.000.000</strong></section>
+              <section><h3>Monto diario</h3><small>LÍMITE</small><strong>Gs. 3.000.000.000</strong><div><p><small>UTILIZADO</small><b>Gs. 0</b></p><p><small>DISPONIBLES</small><b>Gs. 3.000.000.000</b></p></div></section>
+              <section><h3>Monto mensual</h3><small>LÍMITE</small><strong>Gs. 7.000.000.000</strong><div><p><small>UTILIZADO</small><b>Gs. 0</b></p><p><small>DISPONIBLES</small><b>Gs. 7.000.000.000</b></p></div></section>
+            </div>
+          </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow-view" id="confirmationView" hidden>
+        <div class="page-heading"><p>Inicio <span>›</span> Transferencias <span>›</span> Confirmar</p><h1>Confirmar transferencia</h1></div>
+        <div class="request-card">
+          <h2>Datos de la solicitud</h2>
+          <h3>DETALLE CUENTA CRÉDITO</h3>
+          <div class="confirm-detail">
+            <div class="confirm-columns"><p><small>ENTIDAD</small><span>Sudameris</span></p><p><small>NÚMERO DE CUENTA</small><span id="summaryDestination"></span></p><p><small>TITULAR</small><span id="summaryOwner"></span></p></div>
+            <div class="confirm-columns confirm-amount"><p><small>Monto</small><span id="summaryAmount"></span></p><div class="web-summary-rate"><span id="summaryRateLabel">Cotización</span><strong id="summaryRate"></strong></div></div>
+          </div>
+          <h3>DETALLE CUENTA DÉBITO</h3>
+          <div class="confirm-detail"><div class="confirm-columns debit-columns"><p><small>TIPO</small><span id="summaryType"></span></p><p><small>NÚMERO DE CUENTA</small><span id="summaryOrigin"></span></p><p><small>TITULAR</small><span>XXXXXXXXXXXXXXXX</span></p></div></div>
+          <h3>IMPORTE TOTAL A DEBITAR</h3>
+          <div class="confirm-detail" id="summaryTotal"></div>
+        </div>
+        <section class="email-verification" aria-labelledby="emailTitle"><h2 id="emailTitle">Verificación via email</h2><div class="email-body"><p>Hemos enviado una clave temporal por correo electrónico a *******py@gmail.com</p><label>Ingrese el código de verificación</label><div class="verification-digits"><input aria-label="Dígito 1 del código" inputmode="numeric" maxlength="1" pattern="[0-9]"><input aria-label="Dígito 2 del código" inputmode="numeric" maxlength="1" pattern="[0-9]"><input aria-label="Dígito 3 del código" inputmode="numeric" maxlength="1" pattern="[0-9]"><input aria-label="Dígito 4 del código" inputmode="numeric" maxlength="1" pattern="[0-9]"><input aria-label="Dígito 5 del código" inputmode="numeric" maxlength="1" pattern="[0-9]"><input aria-label="Dígito 6 del código" inputmode="numeric" maxlength="1" pattern="[0-9]"></div><p class="resend-row">¿No recibió el código? <button id="resendCode" type="button">Reenviar</button></p><p class="prototype-note" id="verificationStatus" role="status" hidden></p></div></section>
+        <div class="button-row"><button class="secondary-button" id="backButton" type="button">CANCELAR</button><button class="primary-button" id="confirmMockTransfer" type="button" disabled>CONFIRMAR</button></div>
+      </section>
+      <section id="resultView" class="flow-view" hidden>
+        <div class="page-heading"><p>Inicio <span>›</span> Transferencias <span>›</span> Resultado</p><h1>RESULTADO</h1></div>
+        <div class="result-success">Operación exitosa</div>
+        <nav class="result-tabs" aria-label="Comprobante"><button class="active" id="resultSummaryTab" aria-selected="true">Resumen</button><button id="resultDetailsTab" aria-selected="false">Más detalles</button></nav>
+        <article class="result-receipt"><header>SUDAMERIS</header><div class="receipt-body" id="receiptSummary"><div><small>Enviado por</small><span>XXXXXXXXXXXXXXXX</span><span id="resultOrigin"></span></div><div><small>Enviado a</small><span id="resultOwner"></span><span id="resultDestination"></span></div><div><small>Importe</small><span id="resultAmount"></span></div><div><small>Fecha</small><span id="resultDate"></span></div><div><small>Número de soporte</small><span>0062506837</span></div></div><div id="receiptDetails" class="result-detail-card" hidden>
+<h2>Datos de la ejecucion</h2><div class="confirm-detail"><div class="execution-columns"><p><small>Número de operación</small><span>220926/00010/00059/00100/000401039</span></p><p><small>NÚMERO DE SOPORTE</small><span>0062506837</span></p><p><small>FECHA Y HORA</small><span id="detailDate"></span></p></div><div class="execution-posted"><small>FECHA DE IMPUTACIÓN</small><span id="detailPosted"></span></div></div>
+<h2>Datos de la Transaccion</h2><h3>DETALLE CUENTA CRÉDITO</h3><div class="confirm-detail"><div class="confirm-columns"><p><small>TIPO</small><span id="detailCreditType"></span></p><p><small>NÚMERO</small><span id="detailCreditNumber"></span></p><p><small>TITULAR</small><span id="detailCreditOwner"></span></p></div><div class="confirm-columns confirm-amount"><p><small>IMPORTE CRÉDITO:</small><span id="resultCreditAmount"></span></p><p><small id="resultRateLabel">COTIZACIÓN</small><span id="resultRate"></span></p></div></div>
+<h3>DETALLE CUENTA DÉBITO</h3><div class="confirm-detail"><div class="confirm-columns debit-columns"><p><small>TIPO</small><span id="detailDebitType"></span></p><p><small>NÚMERO</small><span id="detailDebitNumber"></span></p><p><small>TITULAR</small><span>XXXXXXXXXXXXXXXX</span></p></div></div>
+<h3>IMPORTE TOTAL DEBITADO</h3><div class="confirm-detail" id="detailTotal"></div></div><footer><button id="resultShare"><span aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor"><path d="m8 11 8-5M8 13l8 5"/><circle cx="5" cy="12" r="3"/><circle cx="19" cy="4" r="3"/><circle cx="19" cy="20" r="3"/></svg></span> Compartir</button><button id="resultDownload"><span aria-hidden="true">⇩</span> Descargar</button></footer></article>
+        <div class="result-actions"><button id="resultFavorite">AGREGAR A FAVORITOS <span aria-hidden="true">☆</span></button><button id="resultNew">NUEVA OPERACIÓN <span aria-hidden="true">⊞</span></button></div><p id="resultStatus" role="status" hidden></p>
+      </section>
+    <span class="transfer-entry-version">v2.0.40</span></main>
+  </div>
+
+  <div class="modal-backdrop" id="boardDialog" hidden>
+    <section class="dialog board-dialog" role="dialog" aria-modal="true" aria-labelledby="boardTitle">
+      <header><h2 id="boardTitle">Consulta de mejora de cotización</h2><button id="closeBoard" type="button" aria-label="Cerrar">×</button></header>
+      <div class="dialog-body">
+        <p class="board-intro" id="boardIntro">Una de las cuentas seleccionadas opera en dólares.</p>
+        <div class="web-currency-route"><div><small>CUENTA ORIGEN</small><strong id="boardOrigin">PYG</strong></div><span>→</span><div><small>CUENTA DESTINO</small><strong id="boardDestination">USD</strong></div></div>
+        <div class="web-maximum"><span>Monto máximo permitido</span><strong>USD 300.000</strong></div>
+        <div class="web-board">
+          <div class="web-board-header"><span>Moneda</span><span>Compra</span><span>Venta</span></div>
+          <div class="web-board-row"><span><b id="boardCurrency">USD</b><small id="boardCurrencyName">Dólar americano</small></span><strong id="boardBuy">Gs. 5.950</strong><strong id="boardSell">Gs. 6.000</strong></div>
+        </div>
+        <div class="web-offer-comparison" id="webOfferComparison">
+          <div><small>Cotización actual</small><strong>Gs. 6.000</strong><span>por USD</span></div>
+          <div class="improved"><small>Cotización mejorada</small><strong>Gs. 6.050</strong><span>por USD</span><b>+ Gs. 50 por USD</b></div>
+        </div>
+        <div class="dialog-actions"><button class="secondary-button" id="continueBoard" type="button">CONTINUAR CON TASA ACTUAL</button><button class="primary-button" id="acceptOffer" type="button">ACEPTAR MEJORA</button></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="error-toast" id="quoteScheduleError" role="alert" aria-live="assertive" hidden>
+    <span class="error-toast-icon" aria-hidden="true">!</span>
+    <span id="quoteErrorMessage">La mejora de cotización está disponible de 08:00 a 15:59 Hs., en días hábiles.</span>
+    <button type="button" aria-label="Cerrar mensaje" onclick="this.parentElement.hidden=true">×</button>
+  </div>
+
+  <script src="../pizarra/rates.js?v=1"></script><script src="app.js?v=28"></script>
+  <script src="saved-accounts.js?v=2"></script>
+  <script src="home.js?v=11"></script>
+  <script src="offer-lifecycle.js?v=26"></script>
+<script src="sidebar-menus.js?v=1"></script></body>
+</html>
