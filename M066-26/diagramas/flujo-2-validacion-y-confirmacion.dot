@@ -1,0 +1,24 @@
+digraph M066 {
+ graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.25", ranksep="0.25", fontname="Arial", splines=polyline];
+ node [shape=box, style="rounded,filled", fillcolor="#F5F5F5", color="#737373", fontname="Arial", fontsize=11, margin="0.12,0.07"];
+ edge [fontname="Arial", fontsize=10, color="#555555", arrowsize=0.65];
+ validar [label="Validar contexto, vigencia y saldo\nPermitir uso parcial y asociar boleta"];
+ apta [shape=diamond,label="¿Boleta válida y\nasociación confirmada?",style=filled];
+ revisar [label="Informar / corregir / reintentar\nNo avanzar con mejora inválida",fillcolor="#FFF4E5"];
+ pre [label="PRECONFIRMAR TRANSFERENCIA\nMostrar tasa y referencia de boleta",fillcolor="#FCE8E8",color="#C00000"];
+ autorizar [label="Segundo factor y firmas aplicables\nControlar horario; conservar tasa concertada"];
+ procesar [label="Procesar transferencia"];
+ resultado [shape=diamond,label="¿Procesamiento\ncorrecto?",style=filled];
+ comprobante [label="Resultado y comprobante\nCotización y boleta cuando corresponda",fillcolor="#EAF4EA"];
+ fallo [label="Informar resultado real y registrar\nSi se generó boleta: queda activa\npara reutilizar por cambio preferencial",fillcolor="#FFF4E5"];
+ validar -> apta;
+ apta -> pre [label="Sí"];
+ apta -> revisar [label="No"];
+ pre -> autorizar -> procesar -> resultado;
+ resultado -> comprobante [label="Sí"];
+ resultado -> fallo [label="No"];
+ paso [label="A · Boleta generada/seleccionada
+o continuación con pizarra",shape=ellipse,fillcolor="#FCE8E8",color="#C00000"];
+ paso -> validar [label="Con boleta"];
+ paso -> pre [label="Con pizarra"];
+}

@@ -10,6 +10,10 @@ Integrar la consulta de oferta, la generación o selección de una boleta de cam
 
 ### Diagrama de Flujo (Opcional)
 
+![Flujo 1 de 2 — Consulta y generación de boleta](diagramas/flujo-1-consulta-y-generacion.png)
+
+![Flujo 2 de 2 — Validación y confirmación de transferencia](diagramas/flujo-2-validacion-y-confirmacion.png)
+
 Seleccionar débito y destino → identificar monedas → cargar importe → validar elegibilidad y horario → consultar oferta → generar o seleccionar boleta → validar saldo y asociar → preconfirmar → autenticar/completar firmas → procesar transferencia → mostrar resultado y comprobante.
 
 Si las monedas son iguales, no se muestra mejora. Si no hay oferta, está fuera de horario o el cliente no utiliza la boleta, se continúa con pizarra conforme al flujo habitual. Si falla la transferencia después de concertar una boleta, esta permanece activa para reutilizarla mediante cambio preferencial.
@@ -296,21 +300,7 @@ Diccionario de datos:
 
 Consideraciones: error de negocio o indisponibilidad muestra mensaje genérico, sin boleta ficticia. Permitir reintentar o continuar con pizarra conforme a Core. Ante resultado incierto, consultar estado antes de repetir.
 
-4- Consulta y selección de boletas concertadas
-
-Servicio Core y Endpoint: identificar servicio vigente de cambio preferencial; contrato pendiente.
-
-Request: contexto autorizado del cliente y operación. Response: lista de boletas compatibles con identificador, saldo, tasa, moneda/unidad, estado y vigencia cuando aplique.
-
-Consideraciones: seleccionar una existente no genera otra. Permitir uso parcial y controlar importe contra saldo en la unidad correcta. El saldo y su actualización deben provenir de Core.
-
-5- Desvinculación o baja de boleta
-
-Servicio Core y Endpoint: pendientes de definición. Request: referencia de boleta, operación y acción autorizada. Response: estado confirmado y disponibilidad residual.
-
-Consideraciones: dejar de usar una boleta existente no implica anularla. Definir si las generadas en el flujo se desvinculan o se dan de baja y si la regla difiere para exterior. Mantener boleta aplicada si falla una baja requerida. No implementar esta decisión a partir de comportamientos diferentes del prototipo.
-
-6- Validación y asociación de boleta a la transferencia
+4- Validación y asociación de boleta a la transferencia
 
 Servicio Core y Endpoint: pendientes de definición o extensión del servicio transaccional existente.
 
